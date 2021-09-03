@@ -101,28 +101,28 @@ window = tk.Tk()
 window.title = "Pomodoro" 
 
 
-window.rowconfigure([0,1,2], minsize=50, weight=1)
-window.columnconfigure([0, 1, 2], minsize=50, weight=1)
+window.rowconfigure([0,1,2], minsize=40, weight=6)
+window.columnconfigure([0, 1, 2], minsize=40, weight=6)
 
-btn_pom = tk.Button(window, text="Pomodoro", command = Pom)
+btn_pom = tk.Button(window, text="Pomodoro", font = ("Arial", 12, "bold"), bg="#2ba6cb", fg="white", command = Pom)
 btn_pom.grid(row=0, column=0, sticky="nsew")
 
-btn_shortbreak = tk.Button(master=window, text="Short Break", command = sb)
+btn_shortbreak = tk.Button(master=window, text="Short Break", font = ("Arial", 12, "bold"), bg="#2ba6cb", fg="white", command = sb)
 btn_shortbreak.grid(row=0, column=1, sticky="nsew")
 
-btn_longbreak = tk.Button(master=window, text="Long Break",  command = lb)
+btn_longbreak = tk.Button(master=window, text="Long Break", font = ("Arial", 12, "bold"), bg="#2ba6cb", fg="white",  command = lb)
 btn_longbreak.grid(row=0, column=2, sticky="nsew")
 
-lbl_value = tk.Label(master=window, text='{:02d}:{:02d}'.format(25, 0), font = ("Arial", 25))
+lbl_value = tk.Label(master=window, text='{:02d}:{:02d}'.format(25, 0), font = ("Arial", 25, "bold"))
 lbl_value.grid(row=1, columnspan= 3)
 
-btn_start = tk.Button(window, text="Start", bg = "green", command = start)
+btn_start = tk.Button(window, text="Start", font = ("Arial", 12, "bold"), bg="#5da423", fg="white",  command = start)
 btn_start.grid(row=2, column=0, sticky="nsew")
 
-btn_stop = tk.Button(master=window, text="Stop", bg = "red", command = stop)
+btn_stop = tk.Button(master=window, text="Stop", font = ("Arial", 12, "bold"), bg="#c60f13", fg="white", command = stop)
 btn_stop.grid(row=2, column=1, sticky="nsew")
 
-btn_reset = tk.Button(master=window, text="Reset", bg = "gray", command = reset)
+btn_reset = tk.Button(master=window, text="Reset", font = ("Arial", 12, "bold"), bg="#e9e9e9",  command = reset)
 btn_reset.grid(row=2, column=2, sticky="nsew")
 
 window.after(1000,subtract)
