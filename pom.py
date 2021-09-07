@@ -98,7 +98,7 @@ def reset():
     set_time(counter)
 
 window = tk.Tk()
-window.title = "Pomodoro" 
+window.title("Pomodoro") 
 
 
 window.rowconfigure([0,1,2], minsize=40, weight=6)
